@@ -30,13 +30,6 @@ lazy.path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 -- }
 
 lazy.setup({
-  -- dashboard
-  {
-    "goolord/alpha-nvim",
-    event = "VimEnter",
-    config = require("ricdotnet.alpha").config,
-  },
-
   { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
   { "nvim-telescope/telescope.nvim" },
   { "nvim-lua/plenary.nvim" },
