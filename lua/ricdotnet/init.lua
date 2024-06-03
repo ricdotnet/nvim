@@ -14,6 +14,4 @@ require("ricdotline").setup({
   theme = "gruvbox",
   separator = "tilt",
 })
-
--- dev
--- require("ricdotmarker").setup()
+require("ricdotmarker").setup()
