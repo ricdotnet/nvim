@@ -23,11 +23,11 @@ function lazy.setup(plugins)
 end
 
 lazy.path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
--- lazy.opts = {
---   dev = {
---     path = "~/Code/lua",
---   },
--- }
+lazy.opts = {
+  dev = {
+    path = "/some/dev/path/here"
+  }
+}
 
 lazy.setup({
   { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
@@ -54,6 +54,7 @@ lazy.setup({
   { "dense-analysis/ale" },
   { "numToStr/Comment.nvim" },
   { "ricdotnet/ricdotline" },
+  { "ricdotnet/ricdotmarker" },
 
   -- themes
   { "dasupradyumna/midnight.nvim" },
@@ -65,7 +66,4 @@ lazy.setup({
     "marko-cerovac/material.nvim",
     priority = 1000,
   },
-
-  -- dev plugins
-  -- { "ricdotmarker", dev = true },
 })
