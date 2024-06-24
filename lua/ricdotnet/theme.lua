@@ -4,6 +4,7 @@ local themes = {
   gruvbox = "ricdotnet.themes.gruvbox",
   onedark = "ricdotnet.themes.onedark",
   material = "ricdotnet.themes.material",
+  catppuccin = "ricdotnet.themes.catppuccin",
 }
 
 function T.setup(theme)

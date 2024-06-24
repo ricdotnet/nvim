@@ -8,10 +8,10 @@ require("ricdotnet.set")
 require("ricdotnet.keys")
 require("Comment").setup()
 
-require("ricdotnet.theme").setup("gruvbox")
+require("ricdotnet.theme").setup("catppuccin")
 require("ricdotline").setup({
   wakatime = true,
-  theme = "gruvbox",
-  separator = "tilt",
+  theme = "catppuccin_mocha",
+  separator = "round",
 })
 require("ricdotmarker").setup()

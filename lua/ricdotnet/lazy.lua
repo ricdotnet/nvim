@@ -23,6 +23,11 @@ function lazy.setup(plugins)
 end
 
 lazy.path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+lazy.opts = {
+  dev = {
+    path = "/some/dev/path/here"
+  }
+}
 
 lazy.setup({
   { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
