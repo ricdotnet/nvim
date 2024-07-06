@@ -10,7 +10,7 @@ require("Comment").setup()
 
 require("ricdotnet.theme").setup("catppuccin")
 require("ricdotline").setup({
-  wakatime = true,
+  wakatime = false,
   theme = "catppuccin_mocha",
   separator = "round",
 })
