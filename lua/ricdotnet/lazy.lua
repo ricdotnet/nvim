@@ -57,6 +57,7 @@ lazy.setup({
   { "ricdotnet/ricdotmarker" },
 
   -- themes
+  { "folke/tokyonight.nvim" },
   { "dasupradyumna/midnight.nvim" },
   { "ellisonleao/gruvbox.nvim" },
   { "catppuccin/nvim" },

@@ -8,10 +8,10 @@ require("ricdotnet.set")
 require("ricdotnet.keys")
 require("Comment").setup()
 
-require("ricdotnet.theme").setup("catppuccin")
+require("ricdotnet.theme").setup("tokyonight")
 require("ricdotline").setup({
   wakatime = false,
-  theme = "catppuccin_mocha",
+  theme = "material",
   separator = "round",
 })
 require("ricdotmarker").setup()

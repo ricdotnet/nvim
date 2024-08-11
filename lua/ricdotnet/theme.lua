@@ -5,6 +5,7 @@ local themes = {
   onedark = "ricdotnet.themes.onedark",
   material = "ricdotnet.themes.material",
   catppuccin = "ricdotnet.themes.catppuccin",
+  tokyonight = "ricdotnet.themes.tokyonight",
 }
 
 function T.setup(theme)
