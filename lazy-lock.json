@@ -23,8 +23,9 @@
   "onedark.nvim": { "branch": "master", "commit": "11de4da47f3e69cb70c3ae9816bd8af166cbe121" },
   "onedarkpro.nvim": { "branch": "main", "commit": "5ffd45b3602bc1ed75f0b2be6c5c1f6ba5c6b796" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
-  "ricdotline": { "branch": "main", "commit": "535573228a8dc9b281100deb6db99b77649b22ae" },
+  "ricdotline": { "branch": "main", "commit": "b87a6afe0ad11b331b8bfda991f96a8f69a5f213" },
   "telescope.nvim": { "branch": "master", "commit": "b4da76be54691e854d3e0e02c36b0245f945c2c7" },
+  "tokyonight.nvim": { "branch": "main", "commit": "057ef5d260c1931f1dffd0f052c685dcd14100a3" },
   "vim-jinja": { "branch": "master", "commit": "7c54e2320c5f676636cdd8697480782eebfb2bf2" },
   "vim-wakatime": { "branch": "master", "commit": "f39c4a201ae350aaba713b59d4a4fdd88e0811aa" }
 }
