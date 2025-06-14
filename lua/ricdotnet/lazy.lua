@@ -25,7 +25,7 @@ end
 lazy.path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 lazy.opts = {
   dev = {
-    path = "/some/dev/path/here"
+    path = "~/Documents/Lua/"
   }
 }
 
@@ -39,7 +39,7 @@ lazy.setup({
   { "hrsh7th/cmp-buffer" },
   { "hrsh7th/cmp-path" },
   { "hrsh7th/cmp-cmdline" },
-  { "saadparwaiz1/cmp_luasnip" },
+  -- { "saadparwaiz1/cmp_luasnip" },
   { "L3MON4D3/LuaSnip" },
   { "rafamadriz/friendly-snippets" },
   { "ray-x/lsp_signature.nvim" },
@@ -53,8 +53,11 @@ lazy.setup({
   { "wakatime/vim-wakatime" },
   { "dense-analysis/ale" },
   { "numToStr/Comment.nvim" },
+  { "axkirillov/easypick.nvim", requires = "nvim-telescope/telescope.nvim" },
+
+  -- own plugins
   { "ricdotnet/ricdotline" },
-  { "ricdotnet/ricdotmarker" },
+  { "ricdotnet/ricdotmarker", path = "ricdotmarker", dev = true },
 
   -- themes
   { "folke/tokyonight.nvim" },

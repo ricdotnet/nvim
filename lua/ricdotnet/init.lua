@@ -7,11 +7,12 @@ require("ricdotnet.icons")
 require("ricdotnet.set")
 require("ricdotnet.keys")
 require("Comment").setup()
+require("ricdotnet.easypick")
 
-require("ricdotnet.theme").setup("tokyonight")
+require("ricdotnet.theme").setup("gruvbox")
 require("ricdotline").setup({
   wakatime = false,
-  theme = "material",
+  theme = "gruvbox",
   separator = "round",
 })
 require("ricdotmarker").setup()
