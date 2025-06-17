@@ -40,12 +40,6 @@ vim.lsp.config('tailwindcss', {
 })
 
 vim.lsp.config('eslint', {
-  on_attach = function(client, bufnr)
-    vim.api.nvim_create_autocmd('BufWritePre', {
-      buffer = bufnr,
-      command = 'LspEslintFixAll',
-    })
-  end,
   filetypes = {
     'javascript',
     'javascriptreact',
