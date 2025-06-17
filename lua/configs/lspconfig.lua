@@ -1,57 +1,56 @@
-local servers = { "luals", "html", "cssls", "vue_ls", "eslint", "tsserver", "tailwindcss" }
+local servers = { 'luals', 'html', 'cssls', 'vue_ls', 'eslint', 'tsserver', 'tailwindcss' }
 vim.lsp.enable(servers)
 
-vim.lsp.config("luals", {
-  cmd = { "lua-language-server", "--stdio" },
-  filetypes = { "lua" },
+vim.lsp.config('luals', {
+  cmd = { 'lua-language-server', '--stdio' },
+  filetypes = { 'lua' },
 })
 
-vim.lsp.config("tsserver", {
+vim.lsp.config('tsserver', {
   on_attach = function()
-    print "tsserver started"
+    print 'tsserver started'
   end,
-  cmd = { "typescript-language-server", "--stdio" },
-  filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+  cmd = { 'typescript-language-server', '--stdio' },
+  filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
 })
 
-vim.lsp.config("vue_ls", {
-  filetypes = { "vue" },
+vim.lsp.config('vue_ls', {
+  filetypes = { 'vue' },
   init_options = {
     vue = {
       hybridMode = false,
     },
     typescript = {
-      tsdk = vim.fn.expand "~/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib",
+      tsdk = vim.fn.expand '~/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib',
     },
   },
 })
 
-vim.lsp.config("tailwindcss", {
+vim.lsp.config('tailwindcss', {
   filetypes = {
-    "html",
-    "css",
-    "scss",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
+    'html',
+    'css',
+    'scss',
+    'javascript',
+    'javascriptreact',
+    'typescript',
+    'typescriptreact',
+    'vue',
   },
 })
 
-vim.lsp.config("eslint", {
+vim.lsp.config('eslint', {
   filetypes = {
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
+    'javascript',
+    'javascriptreact',
+    'typescript',
+    'typescriptreact',
+    'vue',
   },
-  cmd = { "vscode-eslint-language-server", "--stdio" },
+  cmd = { 'vscode-eslint-language-server', '--stdio' },
   settings = {
     experimental = {
       useFlatConfig = true,
     },
   },
 })
-
