@@ -1,15 +1,15 @@
 local servers = { 'luals', 'html', 'cssls', 'vue_ls', 'eslint', 'tsserver', 'tailwindcss' }
 vim.lsp.enable(servers)
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 vim.lsp.config('luals', {
   cmd = { 'lua-language-server', '--stdio' },
   filetypes = { 'lua' },
 })
 
 vim.lsp.config('tsserver', {
-  on_attach = function()
-    print 'tsserver started'
-  end,
+  capabilities = capabilities,
   cmd = { 'typescript-language-server', '--stdio' },
   filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
 })
