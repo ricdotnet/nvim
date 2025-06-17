@@ -14,7 +14,26 @@ return {
 
   {
     'mason-org/mason.nvim',
-    opts = {},
+    build = ':MasonUpdate',
+    config = true,
+  },
+
+  {
+    'williamboman/mason-lspconfig.nvim',
+    dependencies = { 'mason-org/mason.nvim' },
+    config = true,
+  },
+
+  {
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
+    dependencies = {
+      'mason-org/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+    },
+    config = function()
+      print 'installing mason stuff'
+      require('mason-tool-installer').setup(require 'configs.mason')
+    end,
   },
 
   {

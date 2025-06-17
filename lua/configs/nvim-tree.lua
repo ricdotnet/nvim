@@ -16,6 +16,11 @@ end
 return function()
   require('nvim-tree').setup {
     on_attach = on_attach,
+    disable_netrw = true,
+    hijack_directories = {
+      enable = true,
+      auto_open = false,
+    },
     sort = {
       sorter = 'case_sensitive',
     },
