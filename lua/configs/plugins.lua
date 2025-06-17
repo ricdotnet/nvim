@@ -93,6 +93,16 @@ return {
   },
 
   {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.8',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    cmd = 'Telescope',
+    opts = function()
+      return require 'configs.telescope'
+    end,
+  },
+
+  {
     'akinsho/bufferline.nvim',
     version = '*',
     dependencies = 'nvim-tree/nvim-web-devicons',

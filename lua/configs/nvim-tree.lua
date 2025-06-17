@@ -20,10 +20,11 @@ return function()
       sorter = 'case_sensitive',
     },
     view = {
-      width = 25,
+      width = 30,
     },
     renderer = {
       group_empty = true,
+      indent_markers = { enable = true },
     },
     filters = {
       custom = { '^.git$' },
