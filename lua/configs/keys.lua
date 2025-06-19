@@ -17,6 +17,7 @@ map('n', '<leader>ff', ':Telescope find_files<Enter>', { desc = 'Workspace globa
 
 -- nvim tree
 map('n', '<C-n>', ':NvimTreeToggle<Enter>', { desc = 'Open the file tree' })
+map('n', '<C-h>', ':NvimTreeFocus<Enter>', { desc = 'Focus on the file tree' })
 
 -- buffers things
 map('n', '<leader>q', ':bd<Enter>', { desc = 'Close buffer' })
@@ -26,4 +27,7 @@ map('n', '<C-q>', ':bd<Enter>', { desc = 'Close buffer' })
 map('n', '<leader>t', ':tabnew<Enter>', { desc = 'New tab' })
 map('n', '<Tab>', ':BufferLineCycleNext<Enter>', { desc = 'Go to next tab' })
 map('n', '<S-Tab>', ':BufferLineCyclePrev<Enter>', { desc = 'Go to previous tab' })
-map('n', '<C-h>', ':NvimTreeFocus<Enter>', { desc = 'Focus on the file tree' })
+
+-- terminal
+map('n', '<leader>ntt', ':tabnew term://zsh<Enter>a', { desc = 'Open a new tab with a termina' })
+map('t', '<C-x>', '<C-\\><C-n>', { desc = 'Exit TERMINAL mode' })
