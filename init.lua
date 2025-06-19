@@ -44,4 +44,11 @@ require('bufferline').setup {
 }
 
 -- set colorscheme last
+require('kanagawa').setup {
+  theme = 'dragon',
+  background = {
+    dark = 'dragon',
+  },
+}
+
 cmd 'colorscheme kanagawa'
