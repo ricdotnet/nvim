@@ -128,4 +128,5 @@ return {
   },
 
   { 'rebelot/kanagawa.nvim' },
+  { 'ThePrimeagen/vim-be-good' },
 }
