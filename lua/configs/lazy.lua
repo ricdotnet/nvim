@@ -28,6 +28,9 @@ require('lazy').setup {
       not_loaded = '',
     },
   },
+  dev = {
+    path = '~/Code/lua/',
+  },
 
   spec = {
     { import = 'configs.plugins' },

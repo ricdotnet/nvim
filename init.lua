@@ -43,6 +43,8 @@ require('bufferline').setup {
   },
 }
 
+require('ricdotmarker').setup()
+
 -- set colorscheme last
 require('kanagawa').setup {
   theme = 'dragon',

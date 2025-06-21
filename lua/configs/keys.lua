@@ -2,6 +2,8 @@ local map = vim.keymap.set
 
 vim.g.mapleader = ' '
 
+map('n', '<leader>lg', ':LazyGit<Enter>', { desc = 'Open LazyGit' })
+
 -- TODO: refactor these maybe
 map('n', '<leader>/', function()
   require('Comment.api').toggle.linewise.current()
