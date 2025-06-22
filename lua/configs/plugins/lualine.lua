@@ -29,6 +29,7 @@ return {
           normal = { c = { fg = palette_colors.sumiInk0 or '#ffffff', bg = palette_colors.dragonBlack1 } },
           inactive = { c = { fg = palette_colors.sumiInk0 or '#ffffff', bg = transparentbg } },
         },
+        disabled_filetypes = { 'NvimTree' },
       },
       sections = {
         -- these are to remove the defaults

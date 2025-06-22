@@ -55,13 +55,4 @@ vim.diagnostic.config {
 }
 
 require('ricdotmarker').setup()
-
--- set colorscheme last
--- require('kanagawa').setup {
---   theme = 'dragon',
---   background = {
---     dark = 'dragon',
---   },
--- }
-
--- cmd 'colorscheme kanagawa'
+require('presence').setup()

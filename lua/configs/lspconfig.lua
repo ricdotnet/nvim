@@ -1,20 +1,22 @@
+local lsp = vim.lsp
+
 local servers = { 'lua_ls', 'html', 'cssls', 'ts_ls', 'vue_ls', 'eslint', 'tailwindcss' }
-vim.lsp.enable(servers)
+lsp.enable(servers)
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-vim.lsp.config('lua_ls', {
+lsp.config('lua_ls', {
   cmd = { 'lua-language-server', '--stdio' },
   filetypes = { 'lua' },
 })
 
-vim.lsp.config('ts_ls', {
+lsp.config('ts_ls', {
   capabilities = capabilities,
   cmd = { 'typescript-language-server', '--stdio' },
   filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
 })
 
-vim.lsp.config('vue_ls', {
+lsp.config('vue_ls', {
   filetypes = { 'vue' },
   init_options = {
     vue = {
@@ -26,7 +28,7 @@ vim.lsp.config('vue_ls', {
   },
 })
 
-vim.lsp.config('tailwindcss', {
+lsp.config('tailwindcss', {
   filetypes = {
     'html',
     'css',
@@ -39,7 +41,7 @@ vim.lsp.config('tailwindcss', {
   },
 })
 
-vim.lsp.config('eslint', {
+lsp.config('eslint', {
   filetypes = {
     'javascript',
     'javascriptreact',

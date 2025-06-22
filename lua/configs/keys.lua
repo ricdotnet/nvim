@@ -1,4 +1,6 @@
 local map = vim.keymap.set
+local api = vim.api
+local fn = vim.fn
 
 vim.g.mapleader = ' '
 
@@ -9,9 +11,9 @@ map('n', '<leader>/', function()
   require('Comment.api').toggle.linewise.current()
 end, { desc = 'Comment line' })
 map('v', '<leader>/', function()
-  local esc = vim.api.nvim_replace_termcodes('<Esc>', true, false, true)
-  vim.api.nvim_feedkeys(esc, 'x', false)
-  require('Comment.api').toggle.linewise(vim.fn.visualmode())
+  local esc = api.nvim_replace_termcodes('<Esc>', true, false, true)
+  api.nvim_feedkeys(esc, 'x', false)
+  require('Comment.api').toggle.linewise(fn.visualmode())
 end, { desc = 'Toggle block comment' })
 
 -- telescope
