@@ -6,19 +6,8 @@ return {
   { import = 'configs.plugins.lazygit' },
   { import = 'configs.plugins.mason' },
   { import = 'configs.plugins.telescope' },
-
-  {
-    'stevearc/conform.nvim',
-    event = 'BufWritePre',
-    opts = require 'configs.conform',
-  },
-
-  {
-    'neovim/nvim-lspconfig',
-    config = function()
-      require 'configs.lspconfig'
-    end,
-  },
+  { import = 'configs.plugins.conform' },
+  { import = 'configs.plugins.lsp' },
 
   {
     'mason-org/mason.nvim',
