@@ -4,34 +4,24 @@ local fn = vim.fn
 
 vim.g.mapleader = ' '
 
-map('n', '<leader>lg', ':LazyGit<Enter>', { desc = 'Open LazyGit' })
+map('n', '<leader>lg', '<cmd>LazyGit<Enter>', { desc = 'Open LazyGit' })
 
--- TODO: refactor these maybe
-map('n', '<leader>/', function()
-  require('Comment.api').toggle.linewise.current()
-end, { desc = 'Comment line' })
-map('v', '<leader>/', function()
-  local esc = api.nvim_replace_termcodes('<Esc>', true, false, true)
-  api.nvim_feedkeys(esc, 'x', false)
-  require('Comment.api').toggle.linewise(fn.visualmode())
-end, { desc = 'Toggle block comment' })
+map('n', '<leader>/', 'gcc', { desc = 'Toggle comment line' })
+map('v', '<leader>/', 'gc,', { desc = 'Toggle comment block' })
 
--- telescope
-map('n', '<leader>ff', ':Telescope find_files<Enter>', { desc = 'Workspace global file search' })
+map('n', '<leader>ff', '<cmd>Telescope find_files<Enter>', { desc = 'Workspace global file search' })
+map('n', '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<CR>', { desc = 'telescope find in current buffer' })
 
--- nvim tree
-map('n', '<C-n>', ':NvimTreeToggle<Enter>', { desc = 'Open the file tree' })
-map('n', '<C-h>', ':NvimTreeFocus<Enter>', { desc = 'Focus on the file tree' })
+map('n', '<C-n>', '<cmd>NvimTreeToggle<Enter>', { desc = 'Open the file tree' })
+map('n', '<C-h>', '<C-w>h', { desc = 'Focus windows on left' })
+map('n', '<C-l>', '<C-w>l', { desc = 'Focus window on right' })
 
--- buffers things
-map('n', '<leader>q', ':bd<Enter>', { desc = 'Close buffer' })
-map('n', '<C-q>', ':bd<Enter>', { desc = 'Close buffer' })
+map('n', '<leader>q', '<cmd>bd<Enter>', { desc = 'Close buffer' })
+map('n', '<C-q>', '<cmd>bd<Enter>', { desc = 'Close buffer' })
 
--- tabs and things
-map('n', '<leader>t', ':tabnew<Enter>', { desc = 'New tab' })
-map('n', '<Tab>', ':BufferLineCycleNext<Enter>', { desc = 'Go to next tab' })
-map('n', '<S-Tab>', ':BufferLineCyclePrev<Enter>', { desc = 'Go to previous tab' })
+map('n', '<leader>t', '<cmd>tabnew<Enter>', { desc = 'New tab' })
+map('n', '<Tab>', '<cmd>BufferLineCycleNext<Enter>', { desc = 'Go to next tab' })
+map('n', '<S-Tab>', '<cmd>BufferLineCyclePrev<Enter>', { desc = 'Go to previous tab' })
 
--- terminal
-map('n', '<leader>ntt', ':tabnew term://zsh<Enter>a', { desc = 'Open a new tab with a termina' })
+map('n', '<leader>ntt', '<cmd>tabnew term://zsh<Enter>a', { desc = 'Open a new tab with a termina' })
 map('t', '<C-x>', '<C-\\><C-n>', { desc = 'Exit TERMINAL mode' })

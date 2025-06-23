@@ -34,8 +34,23 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
   },
 
-  { 'ThePrimeagen/vim-be-good' },
+  {
+    'folke/which-key.nvim',
+    event = 'VeryLazy',
+    config = function()
+      local kanagawa = require 'kanagawa.colors'
+      local palette_colors = kanagawa.setup().palette
+      vim.api.nvim_set_hl(0, 'WhichKeyNormal', { bg = palette_colors.dragonBlack1 })
+
+      return {
+        triggers = {
+          { '<leader>', mode = { 'n', 'v' } },
+        },
+      }
+    end,
+  },
 
   { 'ricdotnet/ricdotmarker', requires = 'nvim-lua/plenary.nvim' },
   { 'andweeb/presence.nvim' },
+  { 'ThePrimeagen/vim-be-good' },
 }
