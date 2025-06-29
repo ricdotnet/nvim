@@ -50,6 +50,8 @@ return {
     end,
   },
 
+  { 'numToStr/FTerm.nvim' },
+
   { 'ricdotnet/ricdotmarker', requires = 'nvim-lua/plenary.nvim' },
   { 'andweeb/presence.nvim' },
   { 'ThePrimeagen/vim-be-good' },
