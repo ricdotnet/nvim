@@ -1,6 +1,7 @@
 local map = vim.keymap.set
 local api = vim.api
 local fn = vim.fn
+local cmd = vim.cmd
 
 vim.g.mapleader = ' '
 
@@ -29,5 +30,13 @@ map('n', '<leader>ntt', '<cmd>tabnew term://zsh<Enter>a', { desc = 'Open a new t
 map('t', '<C-x>', '<C-\\><C-n>', { desc = 'Exit TERMINAL mode' })
 
 map('n', '<leader>fm', function()
+  local eslintLsp = vim.lsp.get_clients()
+
+  for _, client in ipairs(eslintLsp) do
+    if client.name == 'eslint' then
+      cmd 'LspEslintFixAll'
+    end
+  end
+
   require('conform').format { lsp_fallback = true }
 end, { desc = 'format file' })
