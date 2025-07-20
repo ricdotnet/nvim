@@ -1,11 +1,11 @@
 return {
+  { import = 'configs.plugins.telescope' },
   { import = 'configs.plugins.kanagawa' },
   { import = 'configs.plugins.lualine' },
   { import = 'configs.plugins.nvim-tree' },
   { import = 'configs.plugins.nvim-cmp' },
   { import = 'configs.plugins.lazygit' },
   { import = 'configs.plugins.mason' },
-  { import = 'configs.plugins.telescope' },
   { import = 'configs.plugins.conform' },
   { import = 'configs.plugins.lsp' },
 
