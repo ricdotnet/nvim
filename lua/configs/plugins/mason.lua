@@ -14,6 +14,7 @@ return {
         'vue_ls',
         'eslint',
         'tailwindcss',
+        'basedpyright',
         -- 'volar',
 
         'prettierd',
