@@ -17,10 +17,18 @@ return {
         width = 0.87,
         height = 0.80,
       },
-      mappings = {
-        n = { ['q'] = require('telescope.actions').close },
-      },
     },
+    on_setup = function(telescope)
+      local actions = require('telescope.actions')
+
+      telescope.setup {
+        defaults = {
+          mappings = {
+            n = { ['q'] = actions.close },
+          },
+        },
+      }
+    end,
 
     extensions_list = { 'themes', 'terms' },
     extensions = {},
