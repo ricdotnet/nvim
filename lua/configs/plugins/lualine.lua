@@ -26,7 +26,8 @@ return {
         component_separators = '',
         section_separators = '',
         theme = {
-          normal = { c = { fg = palette_colors.sumiInk0 or '#ffffff', bg = palette_colors.dragonBlack1 } },
+          -- normal = { c = { fg = palette_colors.sumiInk0 or '#ffffff', bg = palette_colors.dragonBlack1 } },
+          normal = { c = { fg = palette_colors.sumiInk0 or '#ffffff', bg = transparentbg } },
           inactive = { c = { fg = palette_colors.sumiInk0 or '#ffffff', bg = transparentbg } },
         },
         disabled_filetypes = { 'NvimTree' },
