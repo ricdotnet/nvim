@@ -29,6 +29,9 @@ map('t', '<A-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
 map('n', '<leader>ntt', '<cmd>tabnew term://zsh<Enter>a', { desc = 'Open a new tab with a terminal' })
 map('t', '<C-x>', '<C-\\><C-n>', { desc = 'Exit TERMINAL mode' })
 
+map('n', '<A-j>', '<cmd>:m+1<Enter>')
+map('n', '<A-k>', '<cmd>:m-2<Enter>')
+
 map('n', '<leader>fm', function()
   local eslintLsp = vim.lsp.get_clients()
 
