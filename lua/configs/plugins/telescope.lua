@@ -19,7 +19,8 @@ return {
       },
     },
     on_setup = function(telescope)
-      local actions = require('telescope.actions')
+      local actions = require 'telescope.actions'
+      local builtin = require 'telescope.builtin'
 
       telescope.setup {
         defaults = {
@@ -27,6 +28,10 @@ return {
             n = { ['q'] = actions.close },
           },
         },
+      }
+
+      builtin.lsp_definitions {
+        jump_type = 'never',
       }
     end,
 

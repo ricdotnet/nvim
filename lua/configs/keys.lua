@@ -12,6 +12,12 @@ map('v', '<leader>/', 'gc,', { desc = 'Toggle comment block', remap = true })
 
 map('n', '<leader>ff', '<cmd>Telescope find_files<Enter>', { desc = 'Workspace global file search' })
 map('n', '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<CR>', { desc = 'telescope find in current buffer' })
+map('n', '<leader>gd', function()
+  require('telescope.builtin').lsp_definitions { jump_type = 'never' }
+end, { desc = 'Show the current function definition', noremap = true, silent = true })
+map('n', '<leader>gr', function()
+  require('telescope.builtin').lsp_references { jump_type = 'never' }
+end, { desc = 'Show the current token references', noremap = true, silent = true })
 
 map('n', '<C-n>', '<cmd>NvimTreeToggle<Enter>', { desc = 'Open the file tree' })
 map('n', '<C-h>', '<C-w>h', { desc = 'Focus windows on left' })
