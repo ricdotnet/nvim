@@ -1,4 +1,10 @@
 return {
+  {
+    'L3MON4D3/LuaSnip',
+    version = 'v2.*',
+    build = 'make install_jsregexp',
+  },
+
   { import = 'configs.plugins.telescope' },
   { import = 'configs.plugins.kanagawa' },
   { import = 'configs.plugins.lualine' },
