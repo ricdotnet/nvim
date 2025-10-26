@@ -12,7 +12,7 @@ return {
         'cssls',
         'ts_ls',
         'vue_ls',
-        'eslint',
+        'eslint-lsp',
         'tailwindcss',
         'basedpyright',
         -- 'volar',
