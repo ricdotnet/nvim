@@ -55,4 +55,3 @@ vim.diagnostic.config {
 }
 
 require('ricdotmarker').setup()
--- require('presence').setup()
