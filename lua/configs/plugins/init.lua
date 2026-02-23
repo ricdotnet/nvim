@@ -59,7 +59,6 @@ return {
   { 'numToStr/FTerm.nvim' },
 
   { 'ricdotnet/ricdotmarker', requires = 'nvim-lua/plenary.nvim' },
-  { 'andweeb/presence.nvim' },
   { 'wakatime/vim-wakatime' },
   { 'ThePrimeagen/vim-be-good' },
 }
