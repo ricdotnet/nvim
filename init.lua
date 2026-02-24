@@ -29,6 +29,8 @@ set.termguicolors = true
 require 'configs.keys'
 require 'configs.lazy'
 
+cmd 'colorscheme tokyonight-night'
+
 require('mason').setup()
 require('bufferline').setup {
   options = {
