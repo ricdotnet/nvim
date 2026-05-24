@@ -38,6 +38,15 @@ map('t', '<C-x>', '<C-\\><C-n>', { desc = 'Exit TERMINAL mode' })
 map('n', '<A-j>', '<cmd>:m+1<Enter>')
 map('n', '<A-k>', '<cmd>:m-2<Enter>')
 
+map('n', '<leader>qf', function()
+  vim.lsp.buf.code_action {
+    filter = function(a)
+      return a.isPreferred
+    end,
+    apply = true,
+  }
+end, { desc = 'Apply quick fix on errors where available', noremap = true, silent = true })
+
 map('n', '<leader>fm', function()
   local eslintLsp = vim.lsp.get_clients()
 

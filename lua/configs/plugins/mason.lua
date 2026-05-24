@@ -15,6 +15,7 @@ return {
         'eslint-lsp',
         'tailwindcss',
         'basedpyright',
+        'clangd',
         -- 'volar',
 
         'prettierd',
