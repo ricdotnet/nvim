@@ -12,7 +12,6 @@ return {
         'cssls',
         'ts_ls',
         'eslint-lsp',
-        'tailwindcss',
         'basedpyright',
 
         'prettierd',

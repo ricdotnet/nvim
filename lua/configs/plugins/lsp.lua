@@ -5,7 +5,7 @@ lsp.enable(servers)
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-function lsp_config()
+local function lsp_config()
   lsp.config('lua_ls', {
     cmd = { 'lua-language-server', '--stdio' },
     filetypes = { 'lua' },
