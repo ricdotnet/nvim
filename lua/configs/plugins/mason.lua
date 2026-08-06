@@ -13,6 +13,7 @@ return {
         'ts_ls',
         'eslint-lsp',
         'basedpyright',
+        'clangd',
 
         'prettierd',
         'stylua',
