@@ -15,6 +15,7 @@ return {
       vue = { 'prettierd', 'prettier' },
       javascript = { 'prettierd', 'prettier' },
       typescript = { 'prettierd', 'prettier' },
+      json = { 'prettierd', 'prettier' },
       -- javascriptjsx = { "prettierd", "prettier" },
       -- typescripttsx = { "prettierd", "prettier" },
     },

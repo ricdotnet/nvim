@@ -16,6 +16,7 @@ return {
         'tailwindcss',
         'basedpyright',
         'clangd',
+        'svelte',
         -- 'volar',
 
         'prettierd',
@@ -24,7 +25,7 @@ return {
       auto_update = true,
 
       run_on_start = true,
-      start_delay = 2000, -- optional: wait for Mason UI to load
+      start_delay = 500,
     }
   end,
 }
