@@ -6,7 +6,7 @@ return {
   },
 
   { import = 'configs.plugins.telescope' },
-  -- { import = 'configs.plugins.kanagawa' },
+  { import = 'configs.plugins.kanagawa' },
   { import = 'configs.plugins.lualine' },
   { import = 'configs.plugins.nvim-tree' },
   { import = 'configs.plugins.nvim-cmp' },
