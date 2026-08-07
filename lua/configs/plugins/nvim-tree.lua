@@ -26,6 +26,12 @@ return {
     require('nvim-tree').setup {
       on_attach = on_attach,
       disable_netrw = true,
+      actions = {
+        open_file = {
+          quit_on_open = false,
+          resize_window = true,
+        },
+      },
       hijack_directories = {
         enable = true,
         auto_open = false,
@@ -35,6 +41,7 @@ return {
       },
       view = {
         width = 30,
+        preserve_window_proportions = true,
       },
       renderer = {
         group_empty = true,

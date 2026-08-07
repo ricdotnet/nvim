@@ -56,10 +56,16 @@ return {
     end,
   },
 
+  {
+    'folke/tokyonight.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+
   { 'numToStr/FTerm.nvim' },
 
   { 'ricdotnet/ricdotmarker', requires = 'nvim-lua/plenary.nvim' },
-  { 'andweeb/presence.nvim' },
   { 'wakatime/vim-wakatime' },
   { 'ThePrimeagen/vim-be-good' },
 }

@@ -11,12 +11,9 @@ return {
         'html',
         'cssls',
         'ts_ls',
-        'vue_ls',
         'eslint-lsp',
-        'tailwindcss',
         'basedpyright',
         'clangd',
-        -- 'volar',
 
         'prettierd',
         'stylua',
@@ -24,7 +21,7 @@ return {
       auto_update = true,
 
       run_on_start = true,
-      start_delay = 2000, -- optional: wait for Mason UI to load
+      start_delay = 500, -- optional: wait for Mason UI to load
     }
   end,
 }

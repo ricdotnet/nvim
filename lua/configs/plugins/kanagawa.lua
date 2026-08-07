@@ -5,10 +5,10 @@ return {
   lazy = true,
   config = function()
     require('kanagawa').setup {
-      theme = 'dragon',
-      transparent = true,
+      theme = 'wave',
+      transparent = false,
       background = {
-        dark = 'dragon',
+        dark = 'wave',
       },
       colors = { theme = { all = { ui = { bg_gutter = 'none' } } } },
       styles = {

@@ -12,7 +12,6 @@ return {
       lua = { 'stylua' },
       css = { 'prettierd', 'prettier' },
       html = { 'prettierd', 'prettier' },
-      vue = { 'prettierd', 'prettier' },
       javascript = { 'prettierd', 'prettier' },
       typescript = { 'prettierd', 'prettier' },
       -- javascriptjsx = { "prettierd", "prettier" },
