@@ -1,5 +1,4 @@
 local set = vim.opt
-local cmd = vim.cmd
 
 -- some options
 set.tabstop = 2
@@ -23,6 +22,31 @@ set.showtabline = 2
 set.colorcolumn = '120'
 
 set.termguicolors = true
+
+-- TODO: refactor out into a auto_cmd file
+-- cheers chatgptitty
+vim.api.nvim_create_autocmd('BufEnter', {
+  callback = function(args)
+    local current = args.buf
+
+    if vim.api.nvim_buf_get_name(current) == '' then
+      return
+    end
+
+    for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+      if
+        buf ~= current
+        and vim.api.nvim_buf_is_valid(buf)
+        and vim.bo[buf].buflisted
+        and vim.bo[buf].buftype == ''
+        and vim.api.nvim_buf_get_name(buf) == ''
+        and not vim.bo[buf].modified
+      then
+        vim.api.nvim_buf_delete(buf, { force = true })
+      end
+    end
+  end,
+})
 
 -- requires
 

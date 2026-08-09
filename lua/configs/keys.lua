@@ -1,12 +1,10 @@
 local map = vim.keymap.set
 local api = vim.api
-local fn = vim.fn
 local cmd = vim.cmd
 
 vim.g.mapleader = ' '
 
 local function delete_buffer()
-  -- Get list of all listed, valid buffers (excluding special/unlisted buffers)
   local buffers = vim.tbl_filter(function(buf)
     return api.nvim_buf_is_valid(buf) and vim.bo[buf].buflisted and vim.bo[buf].buftype == ''
   end, api.nvim_list_bufs())
@@ -14,12 +12,9 @@ local function delete_buffer()
   local current_buf = api.nvim_get_current_buf()
 
   if #buffers > 1 then
-    -- 1. If there are other buffers available, switch to the previous one first
     cmd 'bprevious'
-    -- 2. Delete the original buffer safely
     cmd('bdelete! ' .. current_buf)
   else
-    -- 3. If this was the last buffer, delete it and focus/expand NvimTree
     cmd('bdelete! ' .. current_buf)
     cmd 'NvimTreeFocus'
   end
