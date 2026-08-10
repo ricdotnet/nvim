@@ -1,8 +1,25 @@
 local map = vim.keymap.set
+local api = vim.api
 local cmd = vim.cmd
 local api = vim.api
 
 vim.g.mapleader = ' '
+
+local function delete_buffer()
+  local buffers = vim.tbl_filter(function(buf)
+    return api.nvim_buf_is_valid(buf) and vim.bo[buf].buflisted and vim.bo[buf].buftype == ''
+  end, api.nvim_list_bufs())
+
+  local current_buf = api.nvim_get_current_buf()
+
+  if #buffers > 1 then
+    cmd 'bprevious'
+    cmd('bdelete! ' .. current_buf)
+  else
+    cmd('bdelete! ' .. current_buf)
+    cmd 'NvimTreeFocus'
+  end
+end
 
 map('n', '<leader>lg', '<cmd>LazyGit<Enter>', { desc = 'Open LazyGit' })
 
@@ -22,26 +39,8 @@ map('n', '<C-n>', '<cmd>NvimTreeToggle<Enter>', { desc = 'Open the file tree' })
 map('n', '<C-h>', '<C-w>h', { desc = 'Focus windows on left' })
 map('n', '<C-l>', '<C-w>l', { desc = 'Focus window on right' })
 
-map('n', '<leader>q', '<cmd>bd<Enter>', { desc = 'Close buffer' })
-map('n', '<C-q>', function()
-  -- Get list of all listed, valid buffers (excluding special/unlisted buffers)
-  local buffers = vim.tbl_filter(function(buf)
-    return api.nvim_buf_is_valid(buf) and vim.bo[buf].buflisted and vim.bo[buf].buftype == ''
-  end, api.nvim_list_bufs())
-
-  local current_buf = api.nvim_get_current_buf()
-
-  if #buffers > 1 then
-    -- 1. If there are other buffers available, switch to the previous one first
-    cmd 'bprevious'
-    -- 2. Delete the original buffer safely
-    cmd('bdelete! ' .. current_buf)
-  else
-    -- 3. If this was the last buffer, delete it and focus/expand NvimTree
-    cmd('bdelete! ' .. current_buf)
-    cmd 'NvimTreeFocus'
-  end
-end, { desc = 'Close buffer' })
+map('n', '<leader>q', delete_buffer, { desc = 'Close buffer' })
+map('n', '<C-q>', delete_buffer, { desc = 'Close buffer' })
 
 map('n', '<leader>t', '<cmd>tabnew<Enter>', { desc = 'New tab' })
 map('n', '<Tab>', '<cmd>BufferLineCycleNext<Enter>', { desc = 'Go to next tab' })

@@ -48,7 +48,10 @@ return {
         indent_markers = { enable = true },
       },
       filters = {
-        custom = { '^.git$' },
+        enable = true,
+        dotfiles = false,
+        git_ignored = true,
+        custom = { '.DS_Store' },
       },
     }
   end,

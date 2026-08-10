@@ -4,16 +4,21 @@ return {
   opts = {
     formatters = {
       prettierd = {
-        require_cwd = true,
+        cwd = function(_, ctx)
+          -- Searches upwards from the current buffer to find the /ui project root
+          return vim.fs.root(ctx.buf, { '.prettierrc.json', '.prettierrc', 'package.json' })
+        end,
       },
     },
 
     formatters_by_ft = {
       lua = { 'stylua' },
-      css = { 'prettierd', 'prettier' },
-      html = { 'prettierd', 'prettier' },
-      javascript = { 'prettierd', 'prettier' },
-      typescript = { 'prettierd', 'prettier' },
+      css = { 'prettierd' },
+      html = { 'prettierd' },
+      vue = { 'prettierd' },
+      javascript = { 'prettierd' },
+      typescript = { 'prettierd' },
+      json = { 'prettierd' },
       -- javascriptjsx = { "prettierd", "prettier" },
       -- typescripttsx = { "prettierd", "prettier" },
     },
