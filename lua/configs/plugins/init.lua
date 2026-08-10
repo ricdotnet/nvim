@@ -56,8 +56,19 @@ return {
     end,
   },
 
-  { 'numToStr/FTerm.nvim' },
+  {
+    'nvim-treesitter/nvim-treesitter',
+    branch = 'master',
+    build = ':TSUpdate',
+    config = function()
+      require('nvim-treesitter.configs').setup {
+        ensure_installed = { 'typescript', 'tsx', 'javascript', 'go', 'vue' },
+        highlight = { enable = true },
+      }
+    end,
+  },
 
+  { 'numToStr/FTerm.nvim' },
   { 'ricdotnet/ricdotmarker', requires = 'nvim-lua/plenary.nvim' },
   { 'andweeb/presence.nvim' },
   { 'wakatime/vim-wakatime' },
