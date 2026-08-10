@@ -57,14 +57,19 @@ return {
   },
 
   {
-    'folke/tokyonight.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {},
+    'nvim-treesitter/nvim-treesitter',
+    branch = 'master',
+    build = ':TSUpdate',
+    config = function()
+      require('nvim-treesitter.configs').setup {
+        -- Ensure the typescript parser is locked in
+        ensure_installed = { 'typescript', 'tsx', 'javascript' },
+        highlight = { enable = true },
+      }
+    end,
   },
 
   { 'numToStr/FTerm.nvim' },
-
   { 'ricdotnet/ricdotmarker', requires = 'nvim-lua/plenary.nvim' },
   { 'wakatime/vim-wakatime' },
   { 'ThePrimeagen/vim-be-good' },

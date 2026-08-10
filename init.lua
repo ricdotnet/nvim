@@ -23,6 +23,12 @@ set.colorcolumn = '120'
 
 set.termguicolors = true
 
+set.foldmethod = 'expr'
+set.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+set.foldtext = ''
+set.foldlevel = 99
+set.foldlevelstart = 99
+
 -- TODO: refactor out into a auto_cmd file
 -- cheers chatgptitty
 vim.api.nvim_create_autocmd('BufEnter', {
