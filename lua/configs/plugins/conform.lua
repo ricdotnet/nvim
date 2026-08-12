@@ -19,6 +19,7 @@ return {
       javascript = { 'prettierd' },
       typescript = { 'prettierd' },
       json = { 'prettierd' },
+      python = { 'ruff_format' },
       -- javascriptjsx = { "prettierd", "prettier" },
       -- typescripttsx = { "prettierd", "prettier" },
     },
