@@ -16,7 +16,9 @@ return {
         'clangd',
 
         'prettierd',
+        'ruff',
         'stylua',
+        'ty',
       },
       auto_update = true,
 
