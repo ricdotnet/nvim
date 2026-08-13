@@ -69,6 +69,17 @@ return {
     end,
   },
 
+  {
+    'f-person/git-blame.nvim',
+    event = 'VeryLazy',
+    opts = {
+      enabled = true,
+      message_template = ' <summary> • <date> • <author> • <<sha>>',
+      date_format = '%m-%d-%Y %H:%M:%S',
+      virtual_text_column = 1,
+    },
+  },
+
   { 'numToStr/FTerm.nvim' },
   { 'ricdotnet/ricdotmarker', requires = 'nvim-lua/plenary.nvim' },
   { 'wakatime/vim-wakatime' },
