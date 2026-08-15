@@ -14,7 +14,7 @@ return {
         'eslint-lsp',
         'basedpyright',
         'clangd',
-
+        'svelte',
         'prettierd',
         'ruff',
         'stylua',

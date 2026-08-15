@@ -62,8 +62,7 @@ return {
     build = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup {
-        -- Ensure the typescript parser is locked in
-        ensure_installed = { 'typescript', 'tsx', 'javascript', 'python' },
+        ensure_installed = { 'typescript', 'tsx', 'javascript', 'go', 'vue', 'python' },
         highlight = { enable = true },
       }
     end,
