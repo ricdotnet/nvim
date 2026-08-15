@@ -1,6 +1,7 @@
 local set = vim.opt
 
 -- some options
+
 set.tabstop = 2
 set.shiftwidth = 2
 set.expandtab = true
@@ -59,6 +60,7 @@ vim.api.nvim_create_autocmd('BufEnter', {
 require 'configs.keys'
 require 'configs.lazy'
 
+require('ricdotmarker').setup()
 require('mason').setup()
 require('bufferline').setup {
   options = {
@@ -83,5 +85,3 @@ vim.diagnostic.config {
   update_in_insert = false,
   severity_sort = true,
 }
-
-require('ricdotmarker').setup()

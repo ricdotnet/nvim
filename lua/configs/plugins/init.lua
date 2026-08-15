@@ -79,6 +79,16 @@ return {
     },
   },
 
+  {
+    'folke/lazydev.nvim',
+    ft = 'lua',
+    opts = {
+      library = {
+        { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
+      },
+    },
+  },
+
   { 'numToStr/FTerm.nvim' },
   { 'ricdotnet/ricdotmarker', requires = 'nvim-lua/plenary.nvim' },
   { 'wakatime/vim-wakatime' },
