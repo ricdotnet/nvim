@@ -1,6 +1,6 @@
 local lsp = vim.lsp
 
-local servers = { 'lua_ls', 'html', 'cssls', 'ts_ls', 'eslint', 'tailwindcss', 'gopls' }
+local servers = { 'lua_ls', 'html', 'cssls', 'ts_ls', 'vue_ls', 'eslint', 'tailwindcss', 'gopls', 'svelte' }
 lsp.enable(servers)
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -28,6 +28,23 @@ local function lsp_config()
         },
       },
     },
+  })
+
+  lsp.config('vue_ls', {
+    filetypes = { 'vue' },
+    init_options = {
+      vue = {
+        hybridMode = false,
+      },
+      typescript = {
+        tsdk = vim.fn.expand '~/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib',
+      },
+    },
+  })
+
+  lsp.config('svelte', {
+    capabilities = capabilities,
+    filetypes = { 'svelte' },
   })
 
   lsp.config('tailwindcss', {

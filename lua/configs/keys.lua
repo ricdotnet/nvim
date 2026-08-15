@@ -1,7 +1,6 @@
 local map = vim.keymap.set
 local api = vim.api
 local cmd = vim.cmd
-local api = vim.api
 
 vim.g.mapleader = ' '
 
