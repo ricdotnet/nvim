@@ -75,6 +75,12 @@ local function lsp_config()
       },
     },
   })
+
+  lsp.config('ty', {
+    cmd = { 'ty', 'server' },
+    filetypes = { 'python' },
+    root_dir = vim.fs.root(0, { '.git/', 'pyproject.toml' }),
+  })
 end
 
 return {

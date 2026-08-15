@@ -62,10 +62,21 @@ return {
     build = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'typescript', 'tsx', 'javascript', 'go', 'vue' },
+        ensure_installed = { 'typescript', 'tsx', 'javascript', 'go', 'vue', 'python' },
         highlight = { enable = true },
       }
     end,
+  },
+
+  {
+    'f-person/git-blame.nvim',
+    event = 'VeryLazy',
+    opts = {
+      enabled = true,
+      message_template = ' <summary> • <date> • <author> • <<sha>>',
+      date_format = '%d/%m/%Y %H:%M:%S',
+      virtual_text_column = 1,
+    },
   },
 
   { 'numToStr/FTerm.nvim' },

@@ -17,10 +17,10 @@ return {
         'basedpyright',
         'clangd',
         'svelte',
-        -- 'volar',
-
         'prettierd',
+        'ruff',
         'stylua',
+        'ty',
       },
       auto_update = true,
 
