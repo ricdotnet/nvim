@@ -5,7 +5,7 @@ return {
     formatters = {
       prettierd = {
         cwd = function(_, ctx)
-          -- Searches upwards from the current buffer to find the /ui project root
+          -- TODO: update with more files that could be seen as root for formatters
           return vim.fs.root(ctx.buf, { '.prettierrc.json', '.prettierrc', 'package.json' })
         end,
       },
@@ -19,8 +19,7 @@ return {
       javascript = { 'prettierd' },
       typescript = { 'prettierd' },
       json = { 'prettierd' },
-      -- javascriptjsx = { "prettierd", "prettier" },
-      -- typescripttsx = { "prettierd", "prettier" },
+      python = { 'ruff_format' },
     },
 
     format_on_save = {
