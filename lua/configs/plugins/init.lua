@@ -64,6 +64,7 @@ return {
       require('nvim-treesitter.configs').setup {
         ensure_installed = { 'typescript', 'tsx', 'javascript', 'go', 'vue', 'python', 'json' },
         highlight = { enable = true },
+        auto_install = true,
       }
     end,
   },
